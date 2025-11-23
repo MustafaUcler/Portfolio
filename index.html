@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mustafa Ucler Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -20,14 +20,43 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <!-- Theme Toggle -->
-        <button class="theme-toggle" id="themeToggle">
-            <i class="fa-solid fa-moon" id="themeIcon"></i>
-        </button>
+        <div class="header-right">
 
-        <div class="social-icons">
-            <a href="https://se.linkedin.com/in/mustafaucler"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/MustafaUcler"><i class="fa-brands fa-github"></i></a>
+            <div class="social-icons">
+                <a href="https://se.linkedin.com/in/mustafaucler"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/MustafaUcler"><i class="fa-brands fa-github"></i></a>
+
+
+
+            </div>
+
+            <div> <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+
+            <!-- Language dropdown -->
+            <div class="language-selector">
+                <button class="lang-dropdown-btn">
+                    <img src="images/flag/sweden.png" alt="SV" id="currentFlag">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="lang-dropdown-menu">
+                    <div class="lang-option" data-lang="sv">
+                        <img src="images/flag/sweden.png" alt="SV">
+                        <span>Svenska</span>
+                    </div>
+                    <div class="lang-option" data-lang="en">
+                        <img src="images/flag/united-states.png" alt="EN">
+                        <span>English</span>
+                    </div>
+                    <div class="lang-option" data-lang="tr">
+                        <img src="images/flag/turkey.png" alt="TR">
+                        <span>Türkçe</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -88,44 +117,92 @@
         </div>
     </section>
 
-<section id="skills" class="skills">
-    <h2 class="section-title">My Skills</h2>
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
 
-    <div class="skills-row left-to-right">
-        <div class="skills-track">
-            <div class="skill-card"><img src="images/skills/html5.svg"><h3>HTML5</h3></div>
-            <div class="skill-card"><img src="images/skills/css3.svg"><h3>CSS3</h3></div>
-            <div class="skill-card"><img src="images/skills/javascript.svg"><h3>JavaScript</h3></div>
-            <div class="skill-card"><img src="images/skills/bootstrap.svg"><h3>Bootstrap</h3></div>
-            <div class="skill-card"><img src="images/skills/tailwind-css.svg"><h3>Tailwind CSS</h3></div>
-            <div class="skill-card"><img src="images/skills/jquery.svg"><h3>jQuery</h3></div>
-            <div class="skill-card"><img src="images/skills/vue.js.svg"><h3>Vue.js</h3></div>
-            <div class="skill-card"><img src="images/skills/csharp.png"><h3>C#</h3></div>
-            <div class="skill-card"><img src="images/skills/net-core.svg"><h3>.NET Core</h3></div>
-            <div class="skill-card"><img src="images/skills/nuget.svg"><h3>NuGet</h3></div>
-            <div class="skill-card"><img src="images/skills/json.svg"><h3>JSON</h3></div>
-            <div class="skill-card"><img src="images/skills/yaml.svg"><h3>YAML</h3></div>
+        <div class="skills-row left-to-right">
+            <div class="skills-track">
+                <div class="skill-card"><img src="images/skills/html5.svg">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/css3.svg">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/javascript.svg">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/bootstrap.svg">
+                    <h3>Bootstrap</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/tailwind-css.svg">
+                    <h3>Tailwind CSS</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/jquery.svg">
+                    <h3>jQuery</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/vue.js.svg">
+                    <h3>Vue.js</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/csharp.png">
+                    <h3>C#</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/net-core.svg">
+                    <h3>.NET Core</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/nuget.svg">
+                    <h3>NuGet</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/json.svg">
+                    <h3>JSON</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/yaml.svg">
+                    <h3>YAML</h3>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="skills-row right-to-left">
-        <div class="skills-track">
-            <div class="skill-card"><img src="images/skills/Microsoft-SQL-Server.svg"><h3>MS SQL</h3></div>
-            <div class="skill-card"><img src="images/skills/mongodb.svg"><h3>MongoDB</h3></div>
-            <div class="skill-card"><img src="images/skills/ssms.png"><h3>SSMS</h3></div>
-            <div class="skill-card"><img src="images/skills/signalr.jpg"><h3>SignalR</h3></div>
-            <div class="skill-card"><img src="images/skills/github2png"><h3>GitHub</h3></div>
-            <div class="skill-card"><img src="images/skills/github-actions.svg"><h3>GitHub Actions</h3></div>
-            <div class="skill-card"><img src="images/skills/docker.svg"><h3>Docker</h3></div>
-            <div class="skill-card"><img src="images/skills/kubernetes.svg"><h3>Kubernetes</h3></div>
-            <div class="skill-card"><img src="images/skills/jira.svg"><h3>Jira</h3></div>
-            <div class="skill-card"><img src="images/skills/powershell.svg"><h3>PowerShell</h3></div>
-            <div class="skill-card"><img src="images/skills/visual-studio.svg"><h3>Visual Studio</h3></div>
-            <div class="skill-card"><img src="images/skills/visual-studio-code.svg"><h3>VS Code</h3></div>
+        <div class="skills-row right-to-left">
+            <div class="skills-track">
+                <div class="skill-card"><img src="images/skills/Microsoft-SQL-Server.svg">
+                    <h3>MS SQL</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/mongodb.svg">
+                    <h3>MongoDB</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/ssms.png">
+                    <h3>SSMS</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/signalr.jpg">
+                    <h3>SignalR</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/github2png">
+                    <h3>GitHub</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/github-actions.svg">
+                    <h3>GitHub Actions</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/docker.svg">
+                    <h3>Docker</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/kubernetes.svg">
+                    <h3>Kubernetes</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/jira.svg">
+                    <h3>Jira</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/powershell.svg">
+                    <h3>PowerShell</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/visual-studio.svg">
+                    <h3>Visual Studio</h3>
+                </div>
+                <div class="skill-card"><img src="images/skills/visual-studio-code.svg">
+                    <h3>VS Code</h3>
+                </div>
+            </div>
         </div>
-    </div>
 
-</section>
+    </section>
 
     <section id="contact" class="contact">
 
