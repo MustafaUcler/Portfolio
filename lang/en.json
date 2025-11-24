@@ -16,5 +16,17 @@
     "contact_name": "Name:",
     "contact_email": "Email:",
     "contact_message": "Message:",
-    "contact_send": "Send"
+    "contact_send": "Send",
+    "proj1_title": "Test project 1",
+    "proj1_desc": "Test project 1",
+    "proj1_img_alt": "Test project 1",
+    "proj2_title": "Test project 2",
+    "proj2_desc": "Test project 2",
+    "proj2_img_alt": "Test project 2",
+    "proj3_title": "Test project 3",
+    "proj3_desc": "Test project 3",
+    "proj3_img_alt": "Test project 3",
+    "proj4_title": "Test project 4",
+    "proj4_desc": "Test project 4",
+    "proj4_img_alt": "Test project 4"
 }
