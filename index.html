@@ -6,221 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mustafa Ucler Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="#about" class="active">About</a>
-            <a href="#project">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#tech">Tech Stack</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="header-right">
+    <div class="header-right">
+        <div class="social-icons">
+            <a href="https://se.linkedin.com/in/mustafaucler" aria-label="LinkedIn profil">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/MustafaUcler" aria-label="GitHub profil">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
 
-            <div class="social-icons">
-                <a href="https://se.linkedin.com/in/mustafaucler"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/MustafaUcler"><i class="fa-brands fa-github"></i></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Byt tema">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
 
-
-
-            </div>
-
-            <div> <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+        <div class="language-selector">
+            <button class="lang-dropdown-btn">
+                <img src="images/flag/sweden.png" alt="Svenska" id="currentFlag">
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown-menu">
+                <button class="lang-option" data-lang="sv">
+                    <img src="images/flag/sweden.png" alt="SV">
+                    <span>Svenska</span>
+                </button>
+                <button class="lang-option" data-lang="en">
+                    <img src="images/flag/united-states.png" alt="EN">
+                    <span>English</span>
+                </button>
+                <button class="lang-option" data-lang="tr">
+                    <img src="images/flag/turkey.png" alt="TR">
+                    <span>Türkçe</span>
                 </button>
             </div>
-
-            <!-- Language dropdown -->
-            <div class="language-selector">
-                <button class="lang-dropdown-btn">
-                    <img src="images/flag/sweden.png" alt="SV" id="currentFlag">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="lang-dropdown-menu">
-                    <div class="lang-option" data-lang="sv">
-                        <img src="images/flag/sweden.png" alt="SV">
-                        <span>Svenska</span>
-                    </div>
-                    <div class="lang-option" data-lang="en">
-                        <img src="images/flag/united-states.png" alt="EN">
-                        <span>English</span>
-                    </div>
-                    <div class="lang-option" data-lang="tr">
-                        <img src="images/flag/turkey.png" alt="TR">
-                        <span>Türkçe</span>
-                    </div>
-                </div>
-            </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
+<main>
 
-        <div class="about-img">
-            <img src="images/profile/main.jpg" alt="Profilbild av Mustafa">
-        </div>
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
 
-        <div class="about-content">
-            <p>Hello, my name is <span><strong>Mustafa</strong> </span></p>
-            <p class="typing-text">I am a recent <strong><span> </span></strong> graduate with a strong drive to create
-                smart,
-                sustainable, and modern solutions.</p>
+    <figure class="about-img">
+        <img src="images/profile/main.jpg" alt="Profilbild av Mustafa">
+    </figure>
 
-            <p>I recently graduated from <strong>Teknikhögskolan</strong>, where I spent two years specializing in
-                backend development, databases, frontend, JavaScript frameworks, and cloud services. During my studies,
-                I discovered how much I enjoy combining logical thinking with creative problem-solving.</p>
+    <article class="about-content">
+        <p>Hello, my name is <strong>Mustafa</strong>.</p>
+        <p class="typing-text">I am a recent <strong><span> </span></strong> graduate with a strong drive to create smart, sustainable, and modern solutions.</p>
+        <p>I recently graduated from <strong>Teknikhögskolan</strong>, where I spent two years specializing in backend development, databases, frontend, JavaScript frameworks, and cloud services. During my studies, I discovered how much I enjoy combining logical thinking with creative problem-solving.</p>
+        <p>During my studies, I also completed an internship at <strong>Else AB</strong>, where I gained hands-on experience in a real development environment, collaborated in a team, and applied my tech in practice.</p>
+        <p>I am curious, goal-oriented, and enjoy taking on new technical challenges. I am now looking for a position where I can continue to grow, contribute with energy, and develop further as a software developer alongside a talented team.</p>
+    </article>
+</section>
 
-            <p>During my studies, I also completed an internship at <strong>Else AB</strong>, where I gained hands-on
-                experience in a real development environment, collaborated in a team, and applied my skills in practice.
-            </p>
+<section id="project" class="projects">
+    <h2 class="section-title">My projects</h2>
 
-            <p>I am curious, goal-oriented, and enjoy taking on new technical challenges. I am now looking for a
-                position where I can continue to grow, contribute with energy, and develop further as a software
-                developer alongside a talented team.</p>
-        </div>
+    <div class="project-grid">
+        <article class="project-card" data-project="proj1">
+            <img src="" alt="">
+            <h3>Test project 1</h3>
+            <p>Test project 1</p>
+        </article>
 
-    </section>
+        <article class="project-card" data-project="proj2">
+            <img src="" alt="">
+            <h3>Test project 2</h3>
+            <p>Test project 2</p>
+        </article>
 
-    <section id="project" class="projects">
+        <article class="project-card" data-project="proj3">
+            <img src="" alt="">
+            <h3>Test project 3</h3>
+            <p>Test project 3</p>
+        </article>
 
-        <h2 class="section-title">My projects</h2>
+        <article class="project-card" data-project="proj4">
+            <img src="" alt="">
+            <h3>Test project 4</h3>
+            <p>Test project 4</p>
+        </article>
+    </div>
+</section>
 
-        <div class="project-grid">
+<section id="tech" class="tech">
+    <h2 class="section-title">Tech Stack</h2>
 
-            <div class="project-card" data-project="proj1"> <img src="" alt="">
-                <h3>Test project 1</h3>
-                <p>Test project 1</p>
-            </div>
+    <ul class="tech-row left-to-right">
+        <li class="tech-card"><img src="images/tech/html5.svg" alt="HTML5"><h3>HTML5</h3></li>
+        <li class="tech-card"><img src="images/tech/css3.svg" alt="CSS3"><h3>CSS3</h3></li>
+        <li class="tech-card"><img src="images/tech/javascript.svg" alt="JavaScript"><h3>JavaScript</h3></li>
+        <li class="tech-card"><img src="images/tech/bootstrap.svg" alt="Bootstrap"><h3>Bootstrap</h3></li>
+        <li class="tech-card"><img src="images/tech/tailwind-css.svg" alt="Tailwind CSS"><h3>Tailwind CSS</h3></li>
+        <li class="tech-card"><img src="images/tech/jquery.svg" alt="jQuery"><h3>jQuery</h3></li>
+        <li class="tech-card"><img src="images/tech/vue.js.svg" alt="Vue.js"><h3>Vue.js</h3></li>
+        <li class="tech-card"><img src="images/tech/csharp.png" alt="C#"><h3>C#</h3></li>
+        <li class="tech-card"><img src="images/tech/net-core.svg" alt=".NET Core"><h3>.NET Core</h3></li>
+    </ul>
 
-            <div class="project-card" data-project="proj2"> <img src="" alt="">
-                <h3>Test project 2</h3>
-                <p>Test project 2</p>
-            </div>
+    <ul class="tech-row right-to-left">
+        <li class="tech-card"><img src="images/tech/sql-server.png" alt="MS SQL"><h3>MS SQL</h3></li>
+        <li class="tech-card"><img src="images/tech/mongodb.svg" alt="MongoDB"><h3>MongoDB</h3></li>
+        <li class="tech-card"><img src="images/tech/signalr.jpg" alt="SignalR"><h3>SignalR</h3></li>
+        <li class="tech-card"><img src="images/tech/icon-github.png" alt="GitHub"><h3>GitHub</h3></li>
+        <li class="tech-card"><img src="images/tech/docker.svg" alt="Docker"><h3>Docker</h3></li>
+        <li class="tech-card"><img src="images/tech/kubernetes.svg" alt="Kubernetes"><h3>Kubernetes</h3></li>
+        <li class="tech-card"><img src="images/tech/visual-studio.svg" alt="Visual Studio"><h3>Visual Studio</h3></li>
+        <li class="tech-card"><img src="images/tech/visual-studio-code.svg" alt="VS Code"><h3>VS Code</h3></li>
+    </ul>
+</section>
 
-            <div class="project-card" data-project="proj3"> <img src="" alt="">
-                <h3>Test project 3</h3>
-                <p>Test project 3</p>
-            </div>
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact me</h2>
 
-            <div class="project-card" data-project="proj4"> <img src="" alt="">
-                <h3>Test project 4</h3>
-                <p>Test project 4</p>
-            </div>
+    <form id="contactForm" action="https://formspree.io/f/mldwwavw" method="POST">
+        <fieldset>
+            <legend>Kontakta mig</legend>
 
-        </div>
-    </section>
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
 
-    <section id="skills" class="skills">
-        <h2 class="section-title">My Skills</h2>
+            <label for="email">Mejl:</label>
+            <input type="email" id="email" name="email" required>
 
-        <div class="skills-row left-to-right">
-            <div class="skills-track">
-                <div class="skill-card"><img src="images/skills/html5.svg">
-                    <h3>HTML5</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/css3.svg">
-                    <h3>CSS3</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/javascript.svg">
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/bootstrap.svg">
-                    <h3>Bootstrap</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/tailwind-css.svg">
-                    <h3>Tailwind CSS</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/jquery.svg">
-                    <h3>jQuery</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/vue.js.svg">
-                    <h3>Vue.js</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/csharp.png">
-                    <h3>C#</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/net-core.svg">
-                    <h3>.NET Core</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/nuget.svg">
-                    <h3>NuGet</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/json.svg">
-                    <h3>JSON</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/yaml.svg">
-                    <h3>YAML</h3>
-                </div>
-            </div>
-        </div>
+            <label for="message">Meddelande:</label>
+            <textarea id="message" name="message" required></textarea>
 
-        <div class="skills-row right-to-left">
-            <div class="skills-track">
-                <div class="skill-card"><img src="images/skills/Microsoft-SQL-Server.svg">
-                    <h3>MS SQL</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/mongodb.svg">
-                    <h3>MongoDB</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/ssms.png">
-                    <h3>SSMS</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/signalr.jpg">
-                    <h3>SignalR</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/github2png">
-                    <h3>GitHub</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/github-actions.svg">
-                    <h3>GitHub Actions</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/docker.svg">
-                    <h3>Docker</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/kubernetes.svg">
-                    <h3>Kubernetes</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/jira.svg">
-                    <h3>Jira</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/powershell.svg">
-                    <h3>PowerShell</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/visual-studio.svg">
-                    <h3>Visual Studio</h3>
-                </div>
-                <div class="skill-card"><img src="images/skills/visual-studio-code.svg">
-                    <h3>VS Code</h3>
-                </div>
-            </div>
-        </div>
+            <button type="submit">Skicka</button>
+        </fieldset>
+    </form>
+</section>
 
-    </section>
+</main>
 
-    <section id="contact" class="contact">
+<script src="js/main.js"></script>
 
-        <h2 class="section-title">Contact me</h2>
-
-        <div class="modal-content">
-            <form id="contactForm" action="https://formspree.io/f/mldwwavw" method="POST"> <label
-                    for="name">Namn:</label>
-                <input type="text" id="name" name="name" required> <label for="email">Mejl:</label> <input type="email"
-                    id="email" name="email" required> <label for="message">Meddelande:</label> <textarea id="message"
-                    name="message" required></textarea> <button type="submit">Skicka</button>
-            </form>
-        </div>
-
-    </section>
-
-    <script src="js/main.js"></script>
+<footer class="footer">
+    <p>&copy; 2025 Mustafa Ucler. All rights reserved.</p>
+</footer>
 
 </body>
-
 </html>
