@@ -1,0 +1,24 @@
+{
+    "menu_about": "Om mig",
+    "menu_projects": "Projekt",
+    "menu_tech": "Teknikstack",
+    "menu_contact": "Kontakt",
+
+    "about_title": "Om mig",
+    "about_intro": "Hej, jag heter <strong>Mustafa</strong>.",
+    "about_typing-text": "Jag är en nyexaminerad <strong><span></span></strong> utvecklare med ett starkt driv att skapa smarta, hållbara och moderna lösningar.",
+    "about_education": "Jag tog nyligen examen från <strong>Teknikhögskolan</strong>, där jag under två år specialiserade mig inom backendutveckling, databaser, frontend, JavaScript-ramverk och molntjänster. Under studierna upptäckte jag hur mycket jag tycker om att kombinera logiskt tänkande med kreativ problemlösning.",
+    "about_internship": "Under studietiden gjorde jag även praktik på <strong>Else AB</strong>, där jag fick praktisk erfarenhet av en riktig utvecklingsmiljö, samarbetade i team och använde mina kunskaper i praktiken.",
+    "about_goal": "Jag är nyfiken, målinriktad och tycker om att ta mig an nya tekniska utmaningar. Nu söker jag en tjänst där jag kan fortsätta växa, bidra med energi och utvecklas som mjukvaruutvecklare tillsammans med ett skickligt team.",
+
+    "projects_title": "Mina projekt",
+
+    "tech_title": "Teknikstack",
+
+    "contact_title": "Kontakta mig",
+    "contact_legend": "Kontakta mig",
+    "contact_name": "Namn:",
+    "contact_email": "Mejl:",
+    "contact_message": "Meddelande:",
+    "contact_send": "Skicka"
+}
