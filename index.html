@@ -14,65 +14,63 @@
 <header>
     <nav>
         <ul>
-            <li><a href="#about" class="active">About</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#tech">Tech Stack</a></li>
-            <li><a href="#contact">Contact</a></li>
+<li><a href="#about" class="active" data-translate="menu_about">About</a></li>
+<li><a href="#project" data-translate="menu_projects">Projects</a></li>
+<li><a href="#tech" data-translate="menu_tech">Tech Stack</a></li>
+<li><a href="#contact" data-translate="menu_contact">Contact</a></li>
+
         </ul>
     </nav>
 
-    <div class="header-right">
-        <div class="social-icons">
-            <a href="https://se.linkedin.com/in/mustafaucler" aria-label="LinkedIn profil">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/MustafaUcler" aria-label="GitHub profil">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
+<div class="header-right">
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+    </div>
 
-        <button class="theme-toggle" id="themeToggle" aria-label="Byt tema">
-            <i class="fa-solid fa-moon" id="themeIcon"></i>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+
+    <div class="language-selector">
+        <button class="lang-dropdown-btn">
+            <img src="images/flag/sweden.png" alt="SV" id="currentFlag">
+            <i class="fa-solid fa-chevron-down"></i>
         </button>
-
-        <div class="language-selector">
-            <button class="lang-dropdown-btn">
-                <img src="images/flag/sweden.png" alt="Svenska" id="currentFlag">
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="lang-dropdown-menu">
-                <button class="lang-option" data-lang="sv">
-                    <img src="images/flag/sweden.png" alt="SV">
-                    <span>Svenska</span>
-                </button>
-                <button class="lang-option" data-lang="en">
-                    <img src="images/flag/united-states.png" alt="EN">
-                    <span>English</span>
-                </button>
-                <button class="lang-option" data-lang="tr">
-                    <img src="images/flag/turkey.png" alt="TR">
-                    <span>Türkçe</span>
-                </button>
+        <div class="lang-dropdown-menu">
+            <div class="lang-option" data-lang="sv">
+                <img src="images/flag/sweden.png" alt="SV">
+                <span>Svenska</span>
+            </div>
+            <div class="lang-option" data-lang="en">
+                <img src="images/flag/united-states.png" alt="EN">
+                <span>English</span>
+            </div>
+            <div class="lang-option" data-lang="tr">
+                <img src="images/flag/turkey.png" alt="TR">
+                <span>Türkçe</span>
             </div>
         </div>
     </div>
+</div>
+
 </header>
 
 <main>
 
 <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title" data-translate="about_title">About Me</h2>
 
     <figure class="about-img">
         <img src="images/profile/main.jpg" alt="Profilbild av Mustafa">
     </figure>
 
     <article class="about-content">
-        <p>Hello, my name is <strong>Mustafa</strong>.</p>
-        <p class="typing-text">I am a recent <strong><span> </span></strong> graduate with a strong drive to create smart, sustainable, and modern solutions.</p>
-        <p>I recently graduated from <strong>Teknikhögskolan</strong>, where I spent two years specializing in backend development, databases, frontend, JavaScript frameworks, and cloud services. During my studies, I discovered how much I enjoy combining logical thinking with creative problem-solving.</p>
-        <p>During my studies, I also completed an internship at <strong>Else AB</strong>, where I gained hands-on experience in a real development environment, collaborated in a team, and applied my tech in practice.</p>
-        <p>I am curious, goal-oriented, and enjoy taking on new technical challenges. I am now looking for a position where I can continue to grow, contribute with energy, and develop further as a software developer alongside a talented team.</p>
+        <p data-translate="about_intro"></p>
+        <p data-translate="about_typing-text" class="typing-text"></p>
+        <p data-translate="about_education"></p>
+        <p data-translate="about_internship"></p>
+        <p data-translate="about_goal"></p>
     </article>
 </section>
 
