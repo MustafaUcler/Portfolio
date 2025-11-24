@@ -3,22 +3,30 @@
     "menu_projects": "Projeler",
     "menu_tech": "Teknoloji",
     "menu_contact": "İletişim",
-
     "about_title": "Hakkımda",
     "about_intro": "Merhaba, benim adım <strong>Mustafa</strong>.",
     "about_typing-text": "Akıllı, sürdürülebilir ve modern çözümler üretmeye istekli, yeni mezun bir <strong><span></span></strong> geliştiriciyim.",
     "about_education": "<strong>Teknikhögskolan</strong>'dan yeni mezun oldum. İki yıl boyunca backend geliştirme, veritabanları, frontend, JavaScript framework'leri ve bulut hizmetleri üzerine uzmanlaştım. Eğitim sırasında yaratıcı problem çözme ile mantıksal düşünmeyi birleştirmekten ne kadar keyif aldığımı keşfettim.",
     "about_internship": "Ayrıca <strong>Else AB</strong>'de yaptığım staj sayesinde gerçek bir geliştirme ortamında pratik deneyim kazandım, ekip içinde çalıştım ve öğrendiklerimi uygulamaya döktüm.",
     "about_goal": "Meraklı, hedef odaklıyım ve yeni teknik zorluklarla çalışmayı seviyorum. Şimdi enerjimi katabileceğim, kendimi geliştirebileceğim ve yetenekli bir ekiple birlikte büyüyebileceğim bir yazılım geliştirici pozisyonu arıyorum.",
-
     "projects_title": "Projelerim",
-
     "tech_title": "Teknoloji Yığını",
-
     "contact_title": "Benimle İletişime Geçin",
     "contact_legend": "İletişim",
     "contact_name": "İsim:",
     "contact_email": "E-posta:",
     "contact_message": "Mesaj:",
-    "contact_send": "Gönder"
+    "contact_send": "Gönder",
+    "proj1_title": "Test proje 1",
+    "proj1_desc": "Test proje 1",
+    "proj1_img_alt": "Test proje 1",
+    "proj2_title": "Test proje 2",
+    "proj2_desc": "Test proje 2",
+    "proj2_img_alt": "Test proje 2",
+    "proj3_title": "Test proje 3",
+    "proj3_desc": "Test proje 3",
+    "proj3_img_alt": "Test proje 3",
+    "proj4_title": "Test proje 4",
+    "proj4_desc": "Test proje 4",
+    "proj4_img_alt": "Test proje 4"
 }
