@@ -13,6 +13,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: 40px;
 }
 
 body {
@@ -485,5 +486,48 @@ span {
     transform: scale(1.15) rotate(15deg);
     background-color: var(--bg-primary);
     color: var(--text-secondary);
+}
+
+main {
+    padding-top: 40px;
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+/* Mobile mode */
+@media (max-width: 900px) {
+
+    .hamburger {
+        display: block;
+        z-index: 200;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;    
+        width: 60%;
+        height: 100vh;
+        background-color: var(--bg-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
 
