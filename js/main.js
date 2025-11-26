@@ -47,4 +47,10 @@ function applyTranslations(data) {
         const key = el.getAttribute("data-translate");
         if (data[key]) el.innerHTML = data[key];
     });
+/* Översätt hover text*/
+        document.querySelectorAll("[data-tooltip]").forEach(el => {
+        const key = el.getAttribute("data-tooltip");
+        if (data[key]) el.setAttribute("data-tooltip", data[key]);
+        el.setAttribute("title", data[key]); 
+    });
 }
