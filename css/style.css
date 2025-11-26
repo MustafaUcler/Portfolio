@@ -108,7 +108,7 @@ nav a.active {
     background-color: var(--text-secondary);
     color: var(--bg-primary);
     box-shadow: 0 0 20px var(--shadow-color);
-    transform: rotate(20deg) scale(1.1);
+
 }
 
 /* Theme Toggle */
@@ -131,7 +131,7 @@ nav a.active {
     background-color: var(--text-secondary);
     color: var(--bg-primary);
     box-shadow: 0 0 20px var(--shadow-color);
-    transform: rotate(20deg) scale(1.1);
+
 }
 
 .theme-toggle.rotating i {
@@ -499,6 +499,37 @@ main {
     cursor: pointer;
     color: var(--text-primary);
 }
+
+/* Tooltip styling */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px; /* under ikonen */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    z-index: 3000;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
 
 /* Mobile mode */
 @media (max-width: 900px) {
