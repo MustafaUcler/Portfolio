@@ -28,5 +28,7 @@
     "proj3_img_alt": "Test projekt 3",
     "proj4_title": "Test projekt 4",
     "proj4_desc": "Test projekt 4",
-    "proj4_img_alt": "Test projekt 4"
+    "proj4_img_alt": "Test projekt 4",
+    "tooltip-theme": "Tema",
+    "tooltip-language": "Språk"
 }
