@@ -167,6 +167,8 @@ nav a.active {
 .lang-dropdown-btn i {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
 }
 
 .language-selector.active .lang-dropdown-menu {
