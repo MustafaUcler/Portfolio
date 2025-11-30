@@ -428,17 +428,43 @@ span {
     position: relative;
 }
 
-.typing-text span::before {
+body.lang-sv .typing-text span::before {
     content: "";
     color: #b74b4b;
-    animation: words 20s infinite;
+    animation: words-sv 20s infinite;
 }
 
-@keyframes words {
+body.lang-en .typing-text span::before {
+        content: "";
+    color: #b74b4b;
+    animation: words-en 20s infinite;
+}
+
+body.lang-tr .typing-text span::before {
+        content: "";
+    color: #b74b4b;
+    animation: words-tr 20s infinite;
+}
+
+@keyframes words-sv {
     0% { content: ".Net Utvecklare"; }
     33% { content: "Web Designer"; }
     66% { content: "System Utvecklare"; }
     100% { content: ".Net Utvecklare"; }
+}
+
+@keyframes words-en {
+    0% { content: ".NET Developer"; }
+    33% { content: "Web Designer"; }
+    66% { content: "System Developer"; }
+    100% { content: ".NET Developer"; }
+}
+
+@keyframes words-tr {
+    0% { content: ".NET Geliştiricisiyim"; }
+    33% { content: "Web Tasarımcısıyım"; }
+    66% { content: "Sistem Geliştiricisiyim"; }
+    100% { content: ".NET Geliştiricisiyim"; }
 }
 
 /* Responsive */
