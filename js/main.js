@@ -2,6 +2,8 @@
 const langOptions = document.querySelectorAll(".lang-option");
 let currentLang = localStorage.getItem("lang") || "sv";
 
+document.body.classList.add("lang-" + currentLang);
+
 loadLanguage(currentLang);
 updateFlag(currentLang);
 
@@ -17,6 +19,9 @@ langOptions.forEach(option => {
 
         currentLang = lang;
         localStorage.setItem("lang", lang);
+
+        document.body.classList.remove("lang-sv", "lang-en", "lang-tr");
+        document.body.classList.add("lang-" + lang);
 
         loadLanguage(lang);
         updateFlag(lang);
