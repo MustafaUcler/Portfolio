@@ -309,29 +309,12 @@ span {
 .tech-row {
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .techs-track {
     display: flex;
     gap: 2rem;
-}
-
-.left-to-right .techs-track {
-    animation: scroll-right 18s linear infinite;
-}
-
-.right-to-left .techs-track {
-    animation: scroll-left 18s linear infinite;
-}
-
-@keyframes scroll-left {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-@keyframes scroll-right {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
 }
 
 .tech-card {
