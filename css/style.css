@@ -467,6 +467,45 @@ body.lang-tr .typing-text span::before {
     100% { content: ".NET Geliştiricisiyim"; }
 }
 
+/* Rotera animation bakom profilbild */
+.about-img {
+    position: relative; /
+}
+
+/* Cirkel precis utanför bilden */
+.about-img::before {
+    content: '';
+    position: absolute;
+    top: -4px;             /* flytta uppåt för att centrera */
+    left: -4px;            
+    width: calc(100% + 6px);  /* gör cirkeln lite större än bilden */
+    height: calc(100% + 6px);
+    border-radius: 50%;
+    border: 6px solid var(--text-secondary);
+    z-index: 1;
+    transform-origin: center;
+    animation: spin 10s linear infinite, pulse 5s ease-in-out infinite;
+    box-sizing: border-box;
+}
+
+/* Rotation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pulserande effekt */
+@keyframes pulse {
+    0% { border-color: rgba(183,75,75,0.2); }
+    50% { border-color: rgba(183,75,75,0.8); }
+    100% { border-color: rgba(183,75,75,0.2); }
+}
+
+/* Hover-effekt på bilden */
+.about-img:hover {
+    transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .about {
