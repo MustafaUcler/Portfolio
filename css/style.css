@@ -267,11 +267,54 @@ span {
     color: var(--text-secondary);
 }
 
+.project-scroll-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
 .project-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
+    transition: transform 0.4s ease;
+    width: 100%;
 }
+
+    .project-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+.project-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 20;
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+    .project-arrow.left {
+        left: -10px;
+    }
+
+    .project-arrow.right {
+        right: -10px;
+    }
+
+    .project-arrow:hover {
+        transform: translateY(-50%) scale(1.1);
+        background-color: var(--text-secondary);
+        color: var(--bg-primary);
+        box-shadow: 0 0 25px var(--shadow-color);
+    }
 
 .project-card {
     background: var(--bg-secondary);
@@ -280,6 +323,21 @@ span {
     transition: 0.3s ease;
     cursor: pointer;
     border: 2px solid transparent;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .project-card {
+        min-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-card {
+        min-width: 33.33%;
+    }
 }
 
 .project-card img {
