@@ -31,8 +31,9 @@
 
         <div class="header-right">
             <div class="social-icons">
-                <a href="https://se.linkedin.com/in/mustafaucler" data-tooltip="Linkedin"><i
-                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://se.linkedin.com/in/mustafaucler" data-tooltip="Linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
                 <a href="https://github.com/MustafaUcler" data-tooltip="Github"><i class="fa-brands fa-github"></i></a>
             </div>
 
@@ -85,33 +86,96 @@
         <section id="project" class="projects">
             <h2 class="section-title" data-translate="projects_title">My Projects</h2>
 
-            <div class="project-grid">
-                <article class="project-card" data-project="proj1">
-                    <img src="images/project/no_image.jpg" alt="" data-translate="proj1_img_alt">
-                    <h3 data-translate="proj1_title"></h3>
-                    <p data-translate="proj1_desc"></p>
-                </article>
+            <div class="project-scroll-wrapper">
+                <button id="proj-left" class="project-arrow left" onclick="slideProjects(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-                <article class="project-card" data-project="proj2">
-                    <img src="images/project/no_image.jpg" alt="" data-translate="proj2_img_alt">
-                    <h3 data-translate="proj2_title"></h3>
-                    <p data-translate="proj2_desc"></p>
-                </article>
+                <div class="project-grid">
+                    <article class="project-card" data-project="proj1" onclick="openModal(`proj1`)">
+                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj1_img_alt">
+                        <h3 data-translate="proj1_title"></h3>
+                        <p data-translate="proj1_desc"></p>
+                    </article>
 
-                <article class="project-card" data-project="proj3">
-                    <img src="images/project/no_image.jpg" alt="" data-translate="proj3_img_alt">
-                    <h3 data-translate="proj3_title"></h3>
-                    <p data-translate="proj3_desc"></p>
-                </article>
+                    <article class="project-card" data-project="proj2" onclick="openModal(`proj2`)">
+                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj2_img_alt">
+                        <h3 data-translate="proj2_title"></h3>
+                        <p data-translate="proj2_desc"></p>
+                    </article>
 
-                <article class="project-card" data-project="proj4">
-                    <img src="images/project/no_image.jpg" alt="" data-translate="proj4_img_alt">
-                    <h3 data-translate="proj4_title"></h3>
-                    <p data-translate="proj4_desc"></p>
-                </article>
+                    <article class="project-card" data-project="proj3" onclick="openModal(`proj3`)">
+                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj3_img_alt">
+                        <h3 data-translate="proj3_title"></h3>
+                        <p data-translate="proj3_desc"></p>
+                    </article>
+
+                    <article class="project-card" data-project="proj4" onclick="openModal(`proj4`)">
+                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj4_img_alt">
+                        <h3 data-translate="proj4_title"></h3>
+                        <p data-translate="proj4_desc"></p>
+                    </article>
+                </div>
+
+                <button id="proj-right" class="project-arrow right" onclick="slideProjects(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
             </div>
-        </section>
+</section>
 
+        <!-- Modals för projekt -->
+        <div id="proj1-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('proj1')">&times;</span>
+                <div class="carousel" id="proj1-carousel">
+                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <button class="prev" onclick="changeSlide('proj1', -1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide('proj1', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="proj2-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('proj2')">&times;</span>
+                <div class="carousel" id="proj2-carousel">
+                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <button class="prev" onclick="changeSlide('proj2', -1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide('proj2', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="proj3-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('proj3')">&times;</span>
+                <div class="carousel" id="proj3-carousel">
+                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <button class="prev" onclick="changeSlide('proj3', -1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide('proj3', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="proj4-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('proj4')">&times;</span>
+                <div class="carousel" id="proj4-carousel">
+                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                    <button class="prev" onclick="changeSlide('proj4', -1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide('proj4', 1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
 
         <section id="tech" class="tech">
             <h2 class="section-title" data-translate="tech_title">Tech Stack</h2>
@@ -120,31 +184,40 @@
                 <!-- Rad 1 -->
                 <div class="tech-row left-to-right">
                     <div class="techs-track">
-                        <div class="tech-card"><img src="images/tech/html5.svg" alt="HTML5">
+                        <div class="tech-card">
+                            <img src="images/tech/html5.svg" alt="HTML5">
                             <h3>HTML5</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/css3.svg" alt="CSS3">
+                        <div class="tech-card">
+                            <img src="images/tech/css3.svg" alt="CSS3">
                             <h3>CSS3</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/javascript.svg" alt="JavaScript">
+                        <div class="tech-card">
+                            <img src="images/tech/javascript.svg" alt="JavaScript">
                             <h3>JavaScript</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/bootstrap.svg" alt="Bootstrap">
+                        <div class="tech-card">
+                            <img src="images/tech/bootstrap.svg" alt="Bootstrap">
                             <h3>Bootstrap</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/tailwind-css.svg" alt="Tailwind CSS">
+                        <div class="tech-card">
+                            <img src="images/tech/tailwind-css.svg" alt="Tailwind CSS">
                             <h3>Tailwind CSS</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/github.png" alt="GITHUB">
+                        <div class="tech-card">
+                            <img src="images/tech/github.png" alt="GITHUB">
                             <h3>GITHUB</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/netcore.svg" alt="NETCORE">
+                        <div class="tech-card">
+                            <img src="images/tech/netcore.svg" alt="NETCORE">
                             <h3>NETCORE</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/csharp1.png" alt="CSHARP">
+                        <div class="tech-card">
+                            <img src="images/tech/csharp1.png" alt="CSHARP">
                             <h3>CSHARP</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/jquery1.svg" alt="JQUERY">
+                        <div class="tech-card">
+                            <img src="images/tech/jquery1.svg" alt="JQUERY">
                             <h3>JQUERY</h3>
                         </div>
                     </div>
@@ -153,28 +226,36 @@
                 <!-- Rad 2 -->
                 <div class="tech-row right-to-left">
                     <div class="techs-track">
-                        <div class="tech-card"><img src="images/tech/sql-server.png" alt="MS SQL">
+                        <div class="tech-card">
+                            <img src="images/tech/sql-server.png" alt="MS SQL">
                             <h3>MS SQL</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/mongodb.svg" alt="MongoDB">
+                        <div class="tech-card">
+                            <img src="images/tech/mongodb.svg" alt="MongoDB">
                             <h3>MongoDB</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/signalr.jpg" alt="SignalR">
+                        <div class="tech-card">
+                            <img src="images/tech/signalr.jpg" alt="SignalR">
                             <h3>SignalR</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/docker.svg" alt="Docker">
+                        <div class="tech-card">
+                            <img src="images/tech/docker.svg" alt="Docker">
                             <h3>Docker</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/kubernetes.svg" alt="Kubernetes">
+                        <div class="tech-card">
+                            <img src="images/tech/kubernetes.svg" alt="Kubernetes">
                             <h3>Kubernetes</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/vscode.svg" alt="VS CODE">
+                        <div class="tech-card">
+                            <img src="images/tech/vscode.svg" alt="VS CODE">
                             <h3>VS CODE</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/vue.js1.svg" alt="VUE.JS">
+                        <div class="tech-card">
+                            <img src="images/tech/vue.js1.svg" alt="VUE.JS">
                             <h3>VUE.JS</h3>
                         </div>
-                        <div class="tech-card"><img src="images/tech/vstudio.svg" alt="V STUDIO">
+                        <div class="tech-card">
+                            <img src="images/tech/vstudio.svg" alt="V STUDIO">
                             <h3>V STUDIO</h3>
                         </div>
 
@@ -210,6 +291,10 @@
 
     <!-- Back to top-->
     <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/projectcarousel.js"></script>
+
+    <script src="js/modalcarousel.js"></script>
 
     <script src="js/backtotop.js"></script>
 
