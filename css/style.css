@@ -58,10 +58,6 @@ header {
     z-index: 100;
 }
 
-nav {
-    z-index: 1000;
-}
-
 nav ul {
     display: flex;
     list-style: none;
@@ -615,6 +611,7 @@ main {
         align-items: center;
         justify-content: center;
         transition: 0.3s;
+        z-index: 1000px;
     }
 
     nav.active {
