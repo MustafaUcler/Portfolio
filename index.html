@@ -13,301 +13,298 @@
 
 <body class="light-mode">
 
-    <header>
+    <div class="page-wrapper">
 
-        <div class="hamburger" id="hamburger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+        <header>
 
-        <nav>
-            <ul>
-                <li><a href="#about" class="active" data-translate="menu_about">About</a></li>
-                <li><a href="#project" data-translate="menu_projects">Projects</a></li>
-                <li><a href="#tech" data-translate="menu_tech">Tech Stack</a></li>
-                <li><a href="#contact" data-translate="menu_contact">Contact</a></li>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
 
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active" data-translate="menu_about">About</a></li>
+                    <li><a href="#project" data-translate="menu_projects">Projects</a></li>
+                    <li><a href="#tech" data-translate="menu_tech">Tech Stack</a></li>
+                    <li><a href="#contact" data-translate="menu_contact">Contact</a></li>
 
-        <div class="header-right">
-            <div class="social-icons">
-                <a href="https://se.linkedin.com/in/mustafaucler" data-tooltip="Linkedin">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://se.linkedin.com/in/mustafaucler" data-tooltip="Linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 <a href="https://github.com/MustafaUcler" data-tooltip="Github"><i class="fa-brands fa-github"></i></a>
-            </div>
-
-            <button class="theme-toggle" id="themeToggle" data-tooltip="tooltip-theme">
-                <i class="fa-solid fa-sun" id="themeIcon"></i>
-            </button>
-
-            <div class="language-selector" data-tooltip="tooltip-language">
-                <button class="lang-dropdown-btn">
-                    <img src="images/flag/sweden.png" alt="SV" id="currentFlag">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="lang-dropdown-menu">
-                    <div class="lang-option" data-lang="sv">
-                        <img src="images/flag/sweden.png" alt="SV">
-                        <span>Svenska</span>
-                    </div>
-                    <div class="lang-option" data-lang="en">
-                        <img src="images/flag/united-states.png" alt="EN">
-                        <span>English</span>
-                    </div>
-                    <div class="lang-option" data-lang="tr">
-                        <img src="images/flag/turkey.png" alt="TR">
-                        <span>Türkçe</span>
-                    </div>
                 </div>
-            </div>
-        </div>
 
-    </header>
-
-    <main>
-
-        <section id="about" class="about">
-            <h2 class="section-title" data-translate="about_title">About Me</h2>
-
-            <figure class="about-img">
-                <img src="images/profile/main.jpg" alt="Profilbild av Mustafa">
-            </figure>
-
-            <article class="about-content">
-                <p data-translate="about_intro"></p>
-                <p data-translate="about_typing-text" class="typing-text"></p>
-                <p data-translate="about_education"></p>
-                <p data-translate="about_internship"></p>
-                <p data-translate="about_goal"></p>
-            </article>
-        </section>
-
-        <section id="project" class="projects">
-            <h2 class="section-title" data-translate="projects_title">My Projects</h2>
-
-            <div class="project-scroll-wrapper">
-                <button id="proj-left" class="project-arrow left" onclick="slideProjects(-1)">
-                    <i class="fa-solid fa-chevron-left"></i>
+                <button class="theme-toggle" id="themeToggle" data-tooltip="tooltip-theme">
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
                 </button>
 
-                <div class="project-grid">
-                    <article class="project-card" data-project="proj1" onclick="openModal(`proj1`)">
-                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj1_img_alt">
-                        <h3 data-translate="proj1_title"></h3>
-                        <p data-translate="proj1_desc"></p>
-                    </article>
-
-                    <article class="project-card" data-project="proj2" onclick="openModal(`proj2`)">
-                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj2_img_alt">
-                        <h3 data-translate="proj2_title"></h3>
-                        <p data-translate="proj2_desc"></p>
-                    </article>
-
-                    <article class="project-card" data-project="proj3" onclick="openModal(`proj3`)">
-                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj3_img_alt">
-                        <h3 data-translate="proj3_title"></h3>
-                        <p data-translate="proj3_desc"></p>
-                    </article>
-
-                    <article class="project-card" data-project="proj4" onclick="openModal(`proj4`)">
-                        <img src="images/project/comingsoon.jpg" alt="" data-translate="proj4_img_alt">
-                        <h3 data-translate="proj4_title"></h3>
-                        <p data-translate="proj4_desc"></p>
-                    </article>
-                </div>
-
-                <button id="proj-right" class="project-arrow right" onclick="slideProjects(1)">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-            </div>
-</section>
-
-        <!-- Modals för projekt -->
-        <div id="proj1-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('proj1')">&times;</span>
-                <div class="carousel" id="proj1-carousel">
-                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <button class="prev" onclick="changeSlide('proj1', -1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide('proj1', 1)">&#10095;</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="proj2-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('proj2')">&times;</span>
-                <div class="carousel" id="proj2-carousel">
-                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <button class="prev" onclick="changeSlide('proj2', -1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide('proj2', 1)">&#10095;</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="proj3-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('proj3')">&times;</span>
-                <div class="carousel" id="proj3-carousel">
-                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <button class="prev" onclick="changeSlide('proj3', -1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide('proj3', 1)">&#10095;</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="proj4-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('proj4')">&times;</span>
-                <div class="carousel" id="proj4-carousel">
-                    <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
-                    <button class="prev" onclick="changeSlide('proj4', -1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide('proj4', 1)">&#10095;</button>
-                </div>
-            </div>
-        </div>
-
-        <section id="tech" class="tech">
-            <h2 class="section-title" data-translate="tech_title">Tech Stack</h2>
-
-            <div class="tech-row-wrapper">
-                <!-- Rad 1 -->
-                <div class="tech-row left-to-right">
-                    <div class="techs-track">
-                        <div class="tech-card">
-                            <img src="images/tech/html5.svg" alt="HTML5">
-                            <h3>HTML5</h3>
+                <div class="language-selector" data-tooltip="tooltip-language">
+                    <button class="lang-dropdown-btn">
+                        <img src="images/flag/sweden.png" alt="SV" id="currentFlag">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown-menu">
+                        <div class="lang-option" data-lang="sv">
+                            <img src="images/flag/sweden.png" alt="SV">
+                            <span>Svenska</span>
                         </div>
-                        <div class="tech-card">
-                            <img src="images/tech/css3.svg" alt="CSS3">
-                            <h3>CSS3</h3>
+                        <div class="lang-option" data-lang="en">
+                            <img src="images/flag/united-states.png" alt="EN">
+                            <span>English</span>
                         </div>
-                        <div class="tech-card">
-                            <img src="images/tech/javascript.svg" alt="JavaScript">
-                            <h3>JavaScript</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/bootstrap.svg" alt="Bootstrap">
-                            <h3>Bootstrap</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/tailwind-css.svg" alt="Tailwind CSS">
-                            <h3>Tailwind CSS</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/github.png" alt="GITHUB">
-                            <h3>GITHUB</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/netcore.svg" alt="NETCORE">
-                            <h3>NETCORE</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/csharp1.png" alt="CSHARP">
-                            <h3>CSHARP</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/jquery1.svg" alt="JQUERY">
-                            <h3>JQUERY</h3>
+                        <div class="lang-option" data-lang="tr">
+                            <img src="images/flag/turkey.png" alt="TR">
+                            <span>Türkçe</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Rad 2 -->
-                <div class="tech-row right-to-left">
-                    <div class="techs-track">
-                        <div class="tech-card">
-                            <img src="images/tech/sql-server.png" alt="MS SQL">
-                            <h3>MS SQL</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/mongodb.svg" alt="MongoDB">
-                            <h3>MongoDB</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/signalr.jpg" alt="SignalR">
-                            <h3>SignalR</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/docker.svg" alt="Docker">
-                            <h3>Docker</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/kubernetes.svg" alt="Kubernetes">
-                            <h3>Kubernetes</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/vscode.svg" alt="VS CODE">
-                            <h3>VS CODE</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/vue.js1.svg" alt="VUE.JS">
-                            <h3>VUE.JS</h3>
-                        </div>
-                        <div class="tech-card">
-                            <img src="images/tech/vstudio.svg" alt="V STUDIO">
-                            <h3>V STUDIO</h3>
-                        </div>
+        </header>
 
+        <main>
+
+            <section id="about" class="about">
+                <h2 class="section-title" data-translate="about_title">About Me</h2>
+
+                <figure class="about-img">
+                    <img src="images/profile/main.jpg" alt="Profilbild av Mustafa">
+                </figure>
+
+                <article class="about-content">
+                    <p data-translate="about_intro"></p>
+                    <p data-translate="about_typing-text" class="typing-text"></p>
+                    <p data-translate="about_education"></p>
+                    <p data-translate="about_internship"></p>
+                    <p data-translate="about_goal"></p>
+                </article>
+            </section>
+
+            <section id="project" class="projects">
+                    <h2 class="section-title" data-translate="projects_title">My Projects</h2>
+
+                    <div class="project-scroll-wrapper">
+
+                        <div class="project-grid">
+                            <article class="project-card" data-project="proj1" onclick="openModal(`proj1`)">
+                                <img src="images/project/comingsoon.jpg" alt="" data-translate="proj1_img_alt">
+                                <h3 data-translate="proj1_title"></h3>
+                                <p data-translate="proj1_desc"></p>
+                            </article>
+
+                            <article class="project-card" data-project="proj2" onclick="openModal(`proj2`)">
+                                <img src="images/project/comingsoon.jpg" alt="" data-translate="proj2_img_alt">
+                                <h3 data-translate="proj2_title"></h3>
+                                <p data-translate="proj2_desc"></p>
+                            </article>
+
+                            <article class="project-card" data-project="proj3" onclick="openModal(`proj3`)">
+                                <img src="images/project/comingsoon.jpg" alt="" data-translate="proj3_img_alt">
+                                <h3 data-translate="proj3_title"></h3>
+                                <p data-translate="proj3_desc"></p>
+                            </article>
+
+                            <article class="project-card" data-project="proj4" onclick="openModal(`proj4`)">
+                                <img src="images/project/comingsoon.jpg" alt="" data-translate="proj4_img_alt">
+                                <h3 data-translate="proj4_title"></h3>
+                                <p data-translate="proj4_desc"></p>
+                            </article>
+                        </div>
+                </div>
+            </section>
+
+            <!-- Modals för projekt -->
+            <div id="proj1-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('proj1')">&times;</span>
+                    <div class="carousel" id="proj1-carousel">
+                        <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <button class="prev" onclick="changeSlide('proj1', -1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide('proj1', 1)">&#10095;</button>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div id="proj2-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('proj2')">&times;</span>
+                    <div class="carousel" id="proj2-carousel">
+                        <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <button class="prev" onclick="changeSlide('proj2', -1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide('proj2', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="proj3-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('proj3')">&times;</span>
+                    <div class="carousel" id="proj3-carousel">
+                        <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <button class="prev" onclick="changeSlide('proj3', -1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide('proj3', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="proj4-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('proj4')">&times;</span>
+                    <div class="carousel" id="proj4-carousel">
+                        <div class="carousel-slide active"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <div class="carousel-slide"><img src="images/project/comingsoon.jpg" alt=""></div>
+                        <button class="prev" onclick="changeSlide('proj4', -1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide('proj4', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <section id="tech" class="tech">
+                <h2 class="section-title" data-translate="tech_title">Tech Stack</h2>
+
+                <div class="tech-row-wrapper">
+                    <!-- Rad 1 -->
+                    <div class="tech-row left-to-right">
+                        <div class="techs-track">
+                            <div class="tech-card">
+                                <img src="images/tech/html5.svg" alt="HTML5">
+                                <h3>HTML5</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/css3.svg" alt="CSS3">
+                                <h3>CSS3</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/javascript.svg" alt="JavaScript">
+                                <h3>JavaScript</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/bootstrap.svg" alt="Bootstrap">
+                                <h3>Bootstrap</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/tailwind-css.svg" alt="Tailwind CSS">
+                                <h3>Tailwind CSS</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/github.png" alt="GITHUB">
+                                <h3>GITHUB</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/netcore.svg" alt="NETCORE">
+                                <h3>NETCORE</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/csharp1.png" alt="CSHARP">
+                                <h3>CSHARP</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/jquery1.svg" alt="JQUERY">
+                                <h3>JQUERY</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rad 2 -->
+                    <div class="tech-row right-to-left">
+                        <div class="techs-track">
+                            <div class="tech-card">
+                                <img src="images/tech/sql-server.png" alt="MS SQL">
+                                <h3>MS SQL</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/mongodb.svg" alt="MongoDB">
+                                <h3>MongoDB</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/signalr.jpg" alt="SignalR">
+                                <h3>SignalR</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/docker.svg" alt="Docker">
+                                <h3>Docker</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/kubernetes.svg" alt="Kubernetes">
+                                <h3>Kubernetes</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/vscode.svg" alt="VS CODE">
+                                <h3>VS CODE</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/vue.js1.svg" alt="VUE.JS">
+                                <h3>VUE.JS</h3>
+                            </div>
+                            <div class="tech-card">
+                                <img src="images/tech/vstudio.svg" alt="V STUDIO">
+                                <h3>V STUDIO</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-        <section id="contact" class="contact">
-            <h2 class="section-title" data-translate="contact_title"></h2>
+            <section id="contact" class="contact">
+                <h2 class="section-title" data-translate="contact_title"></h2>
 
-            <form id="contactForm" action="https://formspree.io/f/mldwwavw" method="POST">
-                <fieldset>
-                    <legend data-translate="contact_legend"></legend>
+                <form id="contactForm" action="https://formspree.io/f/mldwwavw" method="POST">
+                    <fieldset>
+                        <legend data-translate="contact_legend"></legend>
 
-                    <label for="name" data-translate="contact_name"></label>
-                    <input type="text" id="name" name="name" required>
+                        <label for="name" data-translate="contact_name"></label>
+                        <input type="text" id="name" name="name" required>
 
-                    <label for="email" data-translate="contact_email"></label>
-                    <input type="email" id="email" name="email" required>
+                        <label for="email" data-translate="contact_email"></label>
+                        <input type="email" id="email" name="email" required>
 
-                    <label for="message" data-translate="contact_message"></label>
-                    <textarea id="message" name="message" required></textarea>
+                        <label for="message" data-translate="contact_message"></label>
+                        <textarea id="message" name="message" required></textarea>
 
-                    <button type="submit" data-translate="contact_send"></button>
-                </fieldset>
-            </form>
-        </section>
+                        <button type="submit" data-translate="contact_send"></button>
+                    </fieldset>
+                </form>
+            </section>
 
 
-    </main>
 
-    <!-- Back to top-->
-    <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+        </main>
 
+        <!-- Back to top-->
+        <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="js/modalcarousel.js"></script>
 
-    <script src="js/backtotop.js"></script>
 
-    <script src="js/hamburgerbar.js"></script>
+        <script src="js/modalcarousel.js"></script>
 
-    <script src="js/theme-toggle.js"></script>
+        <script src="js/backtotop.js"></script>
 
-    <script src="js/tech.js"></script>
+        <script src="js/hamburgerbar.js"></script>
 
-    <script src="js/main.js"></script>
+        <script src="js/theme-toggle.js"></script>
 
+        <script src="js/tech.js"></script>
 
-    <footer class="footer">
-        <p>&copy; 2025 Mustafa Ucler. All rights reserved.</p>
-    </footer>
+        <script src="js/main.js"></script>
+
+        <footer class="footer">
+            <p>&copy; 2025 Mustafa Ucler. All rights reserved.</p>
+        </footer>
+    </div>
 
 </body>
 
