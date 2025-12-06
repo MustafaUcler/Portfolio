@@ -499,22 +499,6 @@ body.lang-tr .typing-text span::before {
     margin-top: 5rem;
 }
 
-
-/* Responsive */
-@media (max-width: 900px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-        gap: 3rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-}
-
 /* Back to Top button */
 #backToTop {
     position: fixed;
