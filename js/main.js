@@ -59,3 +59,11 @@ function applyTranslations(data) {
         el.setAttribute("title", data[key]); 
     });
 }
+
+/* Stäng språkmeny vid klick utanför */
+document.addEventListener("click", (e) => {
+    const langSelector = document.querySelector(".language-selector");
+    if (!langSelector.contains(e.target)) {
+        langSelector.classList.remove("active");
+    }
+});
