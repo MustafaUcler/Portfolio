@@ -58,6 +58,10 @@ header {
     z-index: 100;
 }
 
+nav {
+    z-index: 1000;
+}
+
 nav ul {
     display: flex;
     list-style: none;
