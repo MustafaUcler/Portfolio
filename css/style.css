@@ -393,6 +393,7 @@ span {
 
 .tech-row {
     width: 100%;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -403,7 +404,7 @@ span {
 
 .tech-card {
     flex: 0 0 100px;
-    padding: 1rm;
+    padding: 1rem;
     text-align: center;
     transition: 0.3s;
     border: 2px solid transparent;
@@ -423,11 +424,10 @@ span {
 }
 
 .tech-card:hover {
-    transform: translateY(+3px);
+    transform: translateY(-1px);
     border: 2px solid var(--text-secondary);
     box-shadow: 0 0 5px var(--text-secondary);
     z-index: 10;
-    padding: 2px;
 }
 
 /* Contact Section */
@@ -444,7 +444,8 @@ span {
     box-shadow: 0 0 25px var(--shadow-color);
 }
 
-#contactForm label {
+#contactForm label,
+#contactForm legend {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
