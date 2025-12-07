@@ -186,12 +186,9 @@ nav a.active {
 .lang-dropdown-menu {
     position: absolute;
     top: 110%;
-    right: 0;
     background-color: var(--bg-secondary);
     border: 0.2rem solid var(--border-color);
     border-radius: 1rem;
-    padding: 0.5rem 0;
-    min-width: 150px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -396,7 +393,6 @@ span {
 
 .tech-row {
     width: 100%;
-    overflow: hidden;
     position: relative;
 }
 
@@ -406,19 +402,18 @@ span {
 }
 
 .tech-card {
-    flex: 0 0 130px;
-    background: var(--bg-secondary);
-    border-radius: 1rem;
-    padding: 1rem;
+    flex: 0 0 100px;
+    padding: 1rm;
     text-align: center;
-    box-shadow: 0 0 25px var(--shadow-color);
     transition: 0.3s;
+    border: 2px solid transparent;
+    position: relative;
 }
 
 .tech-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+    width: 90px;
+    height: 90px;
+    border-radius: 25%;
 }
 
 .tech-card h3 {
@@ -428,8 +423,11 @@ span {
 }
 
 .tech-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px var(--shadow-color);
+    transform: translateY(+3px);
+    border: 2px solid var(--text-secondary);
+    box-shadow: 0 0 5px var(--text-secondary);
+    z-index: 10;
+    padding: 2px;
 }
 
 /* Contact Section */
