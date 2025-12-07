@@ -30,5 +30,6 @@
     "proj4_desc": "Test project 4",
     "proj4_img_alt": "Test project 4",
     "tooltip-theme": "Theme",
-    "tooltip-language": "Language"
+    "tooltip-language": "Language",
+    "copyright": "2025 Mustafa Ucler. All rights reserved. This page was built with HTML, CSS, and JavaScript."
 }
