@@ -16,28 +16,38 @@ form.addEventListener('submit', async (e) => {
         if (response.ok) {
             // Visa success-meddelande
             form.innerHTML = `
-                <div style="text-align: center; padding: 3rem; color: var(--text-secondary);">
-                    <h3>✓ Tack för ditt meddelande!</h3>
-                    <p>Jag återkommer så snart som möjligt.</p>
-                    <button class="ok-btn" style="margin-top: 2rem; padding: 1rem 3rem; font-size: 1.6rem; color: var(--bg-primary); background-color: var(--text-secondary); border-radius: 4rem; cursor: pointer; font-weight: 600; transition: 0.3s ease; border: none;">OK</button>
+                <div class="form-message">
+                    <h3 data-translate="form_success_title">✓ Tack för ditt meddelande!</h3>
+                    <p data-translate="form_success_text">Jag återkommer så snart som möjligt.</p>
+                    <button class="form-message-btn" data-translate="form_ok_btn">Okey</button>
                 </div>
             `;
 
-            document.querySelector('.ok-btn').addEventListener('click', () => {
+            // Applicera översättningar
+            if (typeof applyTranslations === 'function') {
+                loadLanguage(localStorage.getItem("lang") || "sv");
+            }
+
+            document.querySelector('.form-message-btn').addEventListener('click', () => {
                 window.location.href = '#contact';
                 window.location.reload();
             });
         } else {
             // Visa fel-meddelande
             form.innerHTML = `
-                <div style="text-align: center; padding: 3rem; color: var(--text-secondary);">
-                    <h3>✗ Något gick fel</h3>
-                    <p>Försök igen senare.</p>
-                    <button class="ok-btn" style="margin-top: 2rem; padding: 1rem 3rem; font-size: 1.6rem; color: var(--bg-primary); background-color: var(--text-secondary); border-radius: 4rem; cursor: pointer; font-weight: 600; transition: 0.3s ease; border: none;">Försök igen</button>
+                <div class="form-message">
+                    <h3 data-translate="form_error_title">✗ Något gick fel</h3>
+                    <p data-translate="form_error_text">Försök igen senare.</p>
+                    <button class="form-message-btn" data-translate="form_retry_btn">Försök igen</button>
                 </div>
             `;
 
-            document.querySelector('.ok-btn').addEventListener('click', () => {
+            // Applicera översättningar
+            if (typeof applyTranslations === 'function') {
+                loadLanguage(localStorage.getItem("lang") || "sv");
+            }
+
+            document.querySelector('.form-message-btn').addEventListener('click', () => {
                 window.location.href = '#contact';
                 window.location.reload();
             });
@@ -45,17 +55,21 @@ form.addEventListener('submit', async (e) => {
     } catch (error) {
         // Visa fel-meddelande vid nätverksfel
         form.innerHTML = `
-            <div style="text-align: center; padding: 3rem; color: var(--text-secondary);">
-                <h3>✗ Något gick fel</h3>
-                <p>Försök igen senare.</p>
-                <button class="ok-btn" style="margin-top: 2rem; padding: 1rem 3rem; font-size: 1.6rem; color: var(--bg-primary); background-color: var(--text-secondary); border-radius: 4rem; cursor: pointer; font-weight: 600; transition: 0.3s ease; border: none;">Försök igen</button>
+            <div class="form-message">
+                <h3 data-translate="form_error_title">✗ Något gick fel</h3>
+                <p data-translate="form_error_text">Försök igen senare.</p>
+                <button class="form-message-btn" data-translate="form_retry_btn">Försök igen</button>
             </div>
         `;
 
-        document.querySelector('.ok-btn').addEventListener('click', () => {
+        // Applicera översättningar
+        if (typeof applyTranslations === 'function') {
+            loadLanguage(localStorage.getItem("lang") || "sv");
+        }
+
+        document.querySelector('.form-message-btn').addEventListener('click', () => {
             window.location.href = '#contact';
             window.location.reload();
         });
     }
 });
-
