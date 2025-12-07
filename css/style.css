@@ -730,10 +730,11 @@ main {
         height: 100vh;
         background-color: var(--bg-secondary);
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        padding-top: 100px;
         transition: 0.3s;
-        z-index: 1000px;
+        z-index: 1000;
     }
 
         nav.active {
