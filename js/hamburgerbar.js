@@ -10,3 +10,10 @@ document.querySelectorAll("nav a").forEach(link => {
         nav.classList.remove("active");
     });
 });
+
+/* Stäng hamburger-meny vid klick utanför */
+document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        nav.classList.remove("active");
+    }
+});
