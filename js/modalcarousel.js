@@ -1,4 +1,4 @@
-// ÷ppna modal
+// ÔøΩppna modal
 function openModal(projectId) {
     const modal = document.getElementById(projectId + '-modal');
     modal.style.display = 'block';
@@ -10,12 +10,12 @@ function openModal(projectId) {
     slides.forEach(slide => slide.classList.remove('active'));
     slides[slideIndices[projectId]].classList.add('active');
 }
-// St‰ng modal
+// StÔøΩng modal
 function closeModal(projectId) {
     document.getElementById(projectId + '-modal').style.display = 'none';
 }
 
-// Klick utanfˆr modal st‰nger
+// Klick utanfÔøΩr modal stÔøΩnger
 window.onclick = function (event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
@@ -36,3 +36,16 @@ function changeSlide(projectId, n) {
 
     slides[slideIndices[projectId]].classList.add('active');
 }
+
+// Lyssna p√• alla btn-preview-knappar
+document.querySelectorAll('.btn-preview').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault(); // hindra att href="#" scrollar
+
+        // H√§mta projectId fr√•n n√§rmaste project-card
+        const projectId = this.closest('.project-card').dataset.project;
+
+        // Anropa openModal-funktionen
+        openModal(projectId);
+    });
+});

@@ -287,7 +287,7 @@ span {
 
 .project-card img {
     width: 100%;
-    height: 150px;
+    height: 90px;
     object-fit: contain;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
@@ -298,6 +298,67 @@ span {
     transform: scale(1.05);
     border-color: var(--text-secondary);
     box-shadow: 0 0 20px var(--text-secondary);
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.project-buttons a {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid transparent;
+}
+
+.btn-live {
+    background: var(--text-secondary);
+    color: var(--bg-primary);
+    box-shadow: 0 0 10px rgba(183, 75, 75, 0.3);
+}
+
+.btn-github {
+    background: rgba(183, 75, 75, 0.1);
+    border: 2px solid var(--text-secondary);
+    color: var(--text-secondary);
+    backdrop-filter: blur(4px);
+}
+
+.btn-preview {
+    background: rgba(183, 75, 75, 0.1);
+    border: 2px solid var(--text-secondary);
+    color: var(--text-secondary);
+    backdrop-filter: blur(4px);
+}
+
+.btn-live:hover {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    box-shadow: 0 0 20px var(--text-secondary);
+    transform: translateY(-2px);
+}
+
+.btn-github:hover {
+    background: var(--text-secondary);
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px var(--text-secondary);
+    transform: translateY(-2px);
+}
+
+.btn-preview:hover {
+    background: var(--text-secondary);
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px var(--text-secondary);
+    transform: translateY(-2px);
 }
 
 /* Tech Stack Badges */
@@ -320,7 +381,7 @@ span {
 
 .tech-stack {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.8rem;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -330,7 +391,6 @@ span {
 .tech-badge {
     padding: 0.6rem 1.2rem;
     border-radius: 2rem;
-    font-size: 1.2rem;
     font-weight: 600;
     display: inline-block;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -338,14 +398,29 @@ span {
 
 .tech-badge:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Colors */
-.tech-html { background: #e34c26; color: white; }
-.tech-css { background: #264de4; color: white; }
-.tech-js { background: #f0db4f; color: #323330; }
-.tech-json { background: #ece19a; color: white;}
+.tech-html {
+    background: #e34c26;
+    color: white;
+}
+
+.tech-css {
+    background: #264de4;
+    color: white;
+}
+
+.tech-js {
+    background: #f0db4f;
+    color: #323330;
+}
+
+.tech-json {
+    background: #ece19a;
+    color: white;
+}
 
 /* Modal Section */
 .modal {
@@ -841,19 +916,19 @@ main {
         gap: 3rem;
     }
 
-        .tech-stack {
+    .tech-stack {
         gap: 0.6rem;
     }
-    
+
     .tech-badge {
         font-size: 1.1rem;
         padding: 0.5rem 1rem;
     }
-    
+
     .project-card h3 {
         font-size: 1.8rem;
     }
-    
+
     .project-card p {
         font-size: 1.3rem;
     }
