@@ -249,10 +249,6 @@ section {
     margin-bottom: 2rem;
 }
 
-span {
-    color: var(--text-secondary);
-}
-
 /* Projects Section */
 .projects {
     padding-top: 8rem;
