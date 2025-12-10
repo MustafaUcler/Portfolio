@@ -1,6 +1,15 @@
-// �ppna modal
+let slideIndices = {};
+
+// Uppdatera caption
+function updateCaption(projectId) {
+    const slides = document.querySelectorAll(`#${projectId}-carousel .carousel-slide`);
+    const caption = document.getElementById(`${projectId}-caption`);
+    caption.textContent = slides[slideIndices[projectId]].dataset.caption;
+}
+
+// Öppna modal
 function openModal(projectId) {
-    const modal = document.getElementById(projectId + '-modal');
+    const modal = document.getElementById(`${projectId}-modal`);
     modal.style.display = 'block';
 
     // Initiera slideIndex om den inte finns
@@ -9,22 +18,23 @@ function openModal(projectId) {
     const slides = modal.querySelectorAll('.carousel-slide');
     slides.forEach(slide => slide.classList.remove('active'));
     slides[slideIndices[projectId]].classList.add('active');
-}
-// St�ng modal
-function closeModal(projectId) {
-    document.getElementById(projectId + '-modal').style.display = 'none';
+
+    updateCaption(projectId); // Uppdatera caption direkt
 }
 
-// Klick utanf�r modal st�nger
+// Stäng modal
+function closeModal(projectId) {
+    document.getElementById(`${projectId}-modal`).style.display = 'none';
+}
+
+// Klick utanför modal stänger
 window.onclick = function (event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
     }
 }
 
-// Carousel funktionalitet
-let slideIndices = {};
-
+// Byt slide
 function changeSlide(projectId, n) {
     const slides = document.querySelectorAll(`#${projectId}-carousel .carousel-slide`);
     if (!slideIndices[projectId]) slideIndices[projectId] = 0;
@@ -35,12 +45,13 @@ function changeSlide(projectId, n) {
     if (slideIndices[projectId] < 0) slideIndices[projectId] = slides.length - 1;
 
     slides[slideIndices[projectId]].classList.add('active');
+    updateCaption(projectId); // Uppdatera caption
 }
 
 // Lyssna på alla btn-preview-knappar
 document.querySelectorAll('.btn-preview').forEach(btn => {
     btn.addEventListener('click', function(e) {
-        e.preventDefault(); // hindra att href="#" scrollar
+        e.preventDefault();
 
         // Hämta projectId från närmaste project-card
         const projectId = this.closest('.project-card').dataset.project;
