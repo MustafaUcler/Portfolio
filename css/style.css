@@ -44,7 +44,7 @@ body {
 
 body.light-mode {
     --bg-primary: #ffffff;
-    --bg-secondary: #ffffff;
+    --bg-secondary: #f3f3f3;
     --text-primary: #1a1a1a;
     --text-secondary: #b74b4b;
     --border-color: #b74b4b;
