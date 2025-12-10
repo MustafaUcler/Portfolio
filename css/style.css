@@ -884,6 +884,21 @@ main {
     filter: drop-shadow(0 0 12px var(--shadow-color));
 }
 
+/* Modal caption */
+.caption {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.caption p {
+    margin: 0;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
 @keyframes muPulse {
     0%, 100% { transform: scale(1); opacity: .7; }
     50%      { transform: scale(1.2); opacity: 1; }
