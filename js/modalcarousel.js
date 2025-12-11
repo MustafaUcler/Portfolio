@@ -21,6 +21,7 @@ function openModal(projectId) {
 
     updateCaption(projectId); // Uppdatera caption direkt
     generateIndicators(projectId);
+    updateSlideNumber(projectId);
 }
 
 // Stäng modal
@@ -48,6 +49,7 @@ function changeSlide(projectId, n) {
     slides[slideIndices[projectId]].classList.add('active');
     updateCaption(projectId); // Uppdatera caption
     generateIndicators(projectId);
+    updateSlideNumber(projectId);
 }
 
 function changeToSlide(projectId, index) {
@@ -59,6 +61,7 @@ function changeToSlide(projectId, index) {
 
     updateCaption(projectId);
     generateIndicators(projectId);
+    updateSlideNumber(projectId);
 }
 
 // Lyssna på alla btn-preview-knappar
@@ -92,4 +95,12 @@ function generateIndicators(projectId) {
 
         indicatorContainer.appendChild(dot);
     });
+}
+
+// Uppdaterar slide nummer för projekt bildrna
+function updateSlideNumber(projectId) {
+    const slides = document.querySelectorAll(`#${projectId}-carousel .carousel-slide`);
+    const numberBox = document.getElementById(`${projectId}-slide-number`);
+
+    numberBox.textContent = `${slideIndices[projectId] + 1} / ${slides.length}`;
 }

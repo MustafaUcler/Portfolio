@@ -909,6 +909,7 @@ body.loaded #site-loader {
     visibility: hidden;
 }
 
+/*Carousel indicators*/
 .carousel-indicators {
     display: flex;
     justify-content: center;
@@ -923,6 +924,19 @@ body.loaded #site-loader {
     background-color: gray;
     cursor: pointer;
     transition: 0.3s;
+}
+
+/*Slide number*/
+.slide-number {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: left;
+    padding-left: 1rem;
+    margin-bottom: 0.8rem;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 6px var(--shadow-color);
 }
 
 .carousel-indicators .dot.active {
