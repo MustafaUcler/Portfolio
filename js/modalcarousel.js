@@ -60,3 +60,23 @@ document.querySelectorAll('.btn-preview').forEach(btn => {
         openModal(projectId);
     });
 });
+
+// Genererar indikatorprickar för en carousel
+function generateIndicators(projectId) {
+    const slides = document.querySelectorAll(`#${projectId}-carousel .carousel-slide`);
+    const indicatorContainer = document.getElementById(`${projectId}-indicators`);
+
+    indicatorContainer.innerHTML = ""; // Rensa gamla
+
+    slides.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (index === slideIndices[projectId]) dot.classList.add("active");
+
+        dot.addEventListener("click", () => {
+            changeToSlide(projectId, index);
+        });
+
+        indicatorContainer.appendChild(dot);
+    });
+}
