@@ -909,6 +909,27 @@ body.loaded #site-loader {
     visibility: hidden;
 }
 
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.carousel-indicators .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-indicators .dot.active {
+    background-color: var(--text-secondary);
+    transform: scale(1.2);
+}
+
 /* Mobile mode */
 @media (max-width: 900px) {
 
