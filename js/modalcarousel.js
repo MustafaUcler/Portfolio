@@ -20,6 +20,7 @@ function openModal(projectId) {
     slides[slideIndices[projectId]].classList.add('active');
 
     updateCaption(projectId); // Uppdatera caption direkt
+    generateIndicators(projectId);
 }
 
 // Stäng modal
@@ -46,6 +47,18 @@ function changeSlide(projectId, n) {
 
     slides[slideIndices[projectId]].classList.add('active');
     updateCaption(projectId); // Uppdatera caption
+    generateIndicators(projectId);
+}
+
+function changeToSlide(projectId, index) {
+    const slides = document.querySelectorAll(`#${projectId}-carousel .carousel-slide`);
+
+    slides[slideIndices[projectId]].classList.remove('active');
+    slideIndices[projectId] = index;
+    slides[index].classList.add('active');
+
+    updateCaption(projectId);
+    generateIndicators(projectId);
 }
 
 // Lyssna på alla btn-preview-knappar
@@ -60,3 +73,23 @@ document.querySelectorAll('.btn-preview').forEach(btn => {
         openModal(projectId);
     });
 });
+
+// Genererar indikatorprickar för en carousel
+function generateIndicators(projectId) {
+    const slides = document.querySelectorAll(`#${projectId}-carousel .carousel-slide`);
+    const indicatorContainer = document.getElementById(`${projectId}-indicators`);
+
+    indicatorContainer.innerHTML = ""; // Rensa gamla
+
+    slides.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (index === slideIndices[projectId]) dot.classList.add("active");
+
+        dot.addEventListener("click", () => {
+            changeToSlide(projectId, index);
+        });
+
+        indicatorContainer.appendChild(dot);
+    });
+}
