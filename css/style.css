@@ -315,33 +315,6 @@ section {
     border: 2px solid transparent;
 }
 
-/* Project features */
-.project-features {
-    padding: 1.2rem;
-    border-radius: 0.8rem;
-    margin: 1.5rem 0;
-}
-
-.project-features h4 {
-
-        font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--text-secondary);
-}
-
-.features-list-vertical {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.feature-item {
-
-        font-size: 1.4rem;
-    line-height: 1.6;
-    color: var(--text-primary);
-}
-
 .btn-live {
     background: var(--text-secondary);
     color: var(--bg-primary);
