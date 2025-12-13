@@ -900,8 +900,17 @@ main {
 }
 
 @keyframes muPulse {
-    0%, 100% { transform: scale(1); opacity: .7; }
-    50%      { transform: scale(1.2); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: .7;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
 }
 
 body.loaded #site-loader {
@@ -952,7 +961,7 @@ body.loaded #site-loader {
 
 .project-col {
     flex: 1;
-    background: #f8f8f8;
+    background: var(--bg-primary);
     padding: 0.5px;
     border-radius: 10px;
 }
