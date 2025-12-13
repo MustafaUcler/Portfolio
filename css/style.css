@@ -892,6 +892,12 @@ main {
     filter: drop-shadow(0 0 12px var(--shadow-color));
 }
 
+.project1-title {
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
 @keyframes muPulse {
 
     0%,
