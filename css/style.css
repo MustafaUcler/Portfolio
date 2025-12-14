@@ -978,6 +978,10 @@ body.loaded #site-loader {
     margin: 0;
 }
 
+.project-col ul :hover {
+    background-color: var(--text-secondary);
+}
+
 .project-col li {
     margin-bottom: 6px;
     font-size: 1.5rem;
