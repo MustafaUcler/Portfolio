@@ -1000,9 +1000,34 @@ body.loaded #site-loader {
         box-shadow: 0 4px 10px #b74b4b;
     }
 
+    .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-right: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .language-selector {
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .lang-dropdown-btn {
+        justify-content: center;
+        margin: 0;
+    }
+
     .hamburger {
         display: block;
         z-index: 200;
+        padding-right: 20px;
     }
 
     nav {
@@ -1043,23 +1068,23 @@ body.loaded #site-loader {
     }
 
     .project-col {
-    flex: 1;
-    background: var(--bg-primary);
-    padding: 5px;
-    border-radius: 10px;
-}
+        flex: 1;
+        background: var(--bg-primary);
+        padding: 5px;
+        border-radius: 10px;
+    }
 
-.project-col h3 {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
+    .project-col h3 {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
 
-.project-col li {
-    margin-bottom: 6px;
-    font-size: 1rem;
-    text-wrap: none;
-}
+    .project-col li {
+        margin-bottom: 6px;
+        font-size: 1rem;
+        text-wrap: none;
+    }
 
     .project-card p {
         font-size: 1.3rem;
@@ -1068,7 +1093,7 @@ body.loaded #site-loader {
     a.btn-github,
     a.btn-live,
     a.btn-preview {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
 }
