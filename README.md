@@ -111,7 +111,7 @@ Detta är min personliga portfolio-webbplats byggd från grunden med vanilla HTM
 - Mjuka övergångar
 - CSS-variabler
 
-**Responsiv Design**
+**Responsiv Design** 
 - Fungerar på alla enheter
 - Hamburgermeny
 - Touchvänlig
