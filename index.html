@@ -107,6 +107,43 @@
                 <div class="project-scroll-wrapper">
 
                     <div class="project-grid">
+                        <article class="project-card" data-project="proj2" onclick="openModal('proj2')">
+                            <img src="images/project/MUChat-Mustafa-Ucler.jpg" alt="MUChat Website" data-translate="proj2_img_alt">
+                            <div class="project-card-content">
+                                <h3 data-translate="proj2_title">MUChat</h3>
+                                <p data-translate="proj2_desc">En realtidschatt-applikation byggd med ASP.NET Core, SignalR och
+                                    flerspråkigt stöd.</p>
+                        
+                                <div class="tech-stack">
+                                    <span class="tech-badge tech-csharp">C#</span>
+                                    <span class="tech-badge tech-aspnet">ASP.NET</span>
+                                    <span class="tech-badge tech-signalr">SignalR</span>
+                                    <span class="tech-badge tech-supabase">Supabase</span>
+                                    <span class="tech-badge tech-bootstrap">Bootstrap</span>
+                                    <span class="tech-badge tech-js">JavaScript</span>
+                                    <span class="tech-badge tech-json">Json</span>
+
+                                </div>
+                        
+                                <div class="project-buttons">
+                                    <a href="https://muchat.mustafaucler.se/" class="btn-live" target="_blank">
+                                        <i class="fa-solid fa-up-right-from-square"></i>
+                                        <span data-translate="project_button_live-demo"> Live </span>
+                                    </a>
+                        
+                                    <a href="https://github.com/MustafaUcler/MUChat" class="btn-github" target="_blank">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span data-translate="project_button_github"> Github </span>
+                                    </a>
+                        
+                                    <a href="#" class="btn-preview">
+                                        <i class="fa-regular fa-image"></i>
+                                        <span data-translate="project_button_preview"> Förhandsvisning </span>
+                                    </a>
+                                </div>
+                        
+                            </div>
+                        </article>
                         <article class="project-card" data-project="proj1" onclick="openModal('proj1')">
                             <img src="images/project/MustafaUclerPortfolio.jpg" alt="Portfolio Website"
                                 data-translate="proj1_img_alt">
@@ -147,6 +184,56 @@
                 </div>
             </section>
 
+            <div id="proj2-modal" class="modal">
+                <div class="modal-content">
+                    <button class="close" onclick="closeModal('proj2')" aria-label="Stäng">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="slide-number" id="proj2-slide-number"></div>
+                    <div class="carousel" id="proj2-carousel">
+                        <div class="project1-title" data-translate="project2_title">MUChat</div>
+                        <div class="carousel-slide active"><img src="images/project/MUChat-Mustafa-Ucler.jpg" alt=""></div>
+                        <button class="prev" onclick="changeSlide('proj2', -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next" onclick="changeSlide('proj2', 1)"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="carousel-indicators" id="proj2-indicators"></div>
+                    <div class="caption" id="proj2-caption"> </div>
+                    <div class="project-flex">
+                        <div class="project-col">
+                            <h3 data-translate="proj2_features_title">Funktioner</h3>
+                            <ul>
+                                <li data-translate="proj2_feature_realtime">✓ Realtidschatt (SignalR)</li>
+                                <li data-translate="proj2_feature_mentions">✓ Omnämnanden med notiser</li>
+                                <li data-translate="proj2_feature_admin">✓ Adminpanel med roller och statistik</li>
+                                <li data-translate="proj2_feature_moderation">✓ Rapportera/radera meddelanden</li>
+                                <li data-translate="proj2_feature_customization">✓ Anpassningsbara avatarer och bakgrunder (admin-godkända)
+                                </li>
+                                <li data-translate="proj2_feature_multilang">✓ Flerspråkigt</li>
+                                <li data-translate="proj2_feature_auth">✓ Inloggning/Registrering</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="project-col">
+                            <h3 data-translate="proj2_tech_title">Teknikstack</h3>
+                            <ul>
+                                <li data-translate="proj2_tech_csharp">✓ C# / ASP.NET Core</li>
+                                <li data-translate="proj2_tech_signalr">✓ SignalR</li>
+                                <li data-translate="proj2_tech_supabase">✓ Supabase (databas, auth, storage)</li>
+                                <li data-translate="proj2_tech_js">✓ JavaScript</li>
+                                <li data-translate="proj2_tech_bootstrap">✓ Bootstrap</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="project-col">
+                            <h3 data-translate="proj2_ci_title">CI/CD & Hosting</h3>
+                            <ul>
+                                <li data-translate="proj2_ci_docker">✓ Dockeriserad (.NET 10)</li>
+                                <li data-translate="proj2_ci_render">✓ Hostad på Render, eget domän</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
             <!-- Modals för projekt -->
             <div id="proj1-modal" class="modal">
                 <div class="modal-content">
