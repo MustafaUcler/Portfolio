@@ -377,6 +377,7 @@ section {
 
 .tech-stack {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.8rem;
     margin-top: 1.5rem;
@@ -415,6 +416,31 @@ section {
 
 .tech-json {
     background: #ece19a;
+    color: white;
+}
+
+.tech-csharp {
+    background: #512BD4;
+    color: white;
+}
+
+.tech-aspnet {
+    background: #5C2D91;
+    color: white;
+}
+
+.tech-signalr {
+    background: #00758F;
+    color: white;
+}
+
+.tech-supabase {
+    background: #3ECF8E;
+    color: #1a1a1a;
+}
+
+.tech-bootstrap {
+    background: #7952B3;
     color: white;
 }
 
