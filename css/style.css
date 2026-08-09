@@ -608,6 +608,23 @@ section {
     box-shadow: 0 0 25px var(--shadow-color);
 }
 
+#contactForm fieldset {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+#contactForm label,
+#contactForm legend,
+#contactForm button {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
 #contactForm label,
 #contactForm legend {
     font-size: 1.6rem;
@@ -1142,6 +1159,17 @@ body.loaded #site-loader {
 }
 
 @media (max-width: 480px) {
+
+    #contactForm {
+        padding: 1.2rem;
+        margin: 3rem auto;
+    }
+
+    #contactForm button {
+        padding: 0.8rem 1.2rem;
+        font-size: 1.3rem;
+    }
+
     .section-title {
         font-size: 2.6rem;
     }
