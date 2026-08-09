@@ -1009,12 +1009,14 @@ body.loaded #site-loader {
 }
 
 .project-flex {
+    flex-direction: column;
     display: flex;
     gap: 2px;
     margin-top: 20px;
 }
 
 .project-col {
+    min-width: 0;
     flex: 1;
     background: var(--bg-primary);
     padding: 20px;
