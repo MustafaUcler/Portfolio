@@ -1140,6 +1140,10 @@ body.loaded #site-loader {
 }
 
 @media (max-width: 480px) {
+    .section-title {
+        font-size: 2.6rem;
+    }
+
     .social-icons a,
     .theme-toggle {
         width: 3.2rem;
