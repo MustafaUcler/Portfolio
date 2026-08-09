@@ -1042,6 +1042,7 @@ body.loaded #site-loader {
     .header-right {
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 1rem;
@@ -1135,4 +1136,25 @@ body.loaded #site-loader {
         font-size: 0.9rem;
     }
 
+}
+
+@media (max-width: 480px) {
+    .social-icons a,
+    .theme-toggle {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.6rem;
+    }
+
+    .header-right {
+        gap: 0.8rem;
+    }
+
+    .lang-dropdown-btn {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .social-icons {
+        gap: 0.8rem;
+    }
 }
